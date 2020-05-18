@@ -12,7 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'PortfolioController@home');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('contact', 'PortfolioController@contact');
+Route::post('contact', 'PortfolioController@saveContactForm');
+
+Route::get('plugins', 'PortfolioController@plugins');
+Route::get('resume', 'PortfolioController@resume');
